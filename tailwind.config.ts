@@ -72,10 +72,15 @@ export default {
 			backgroundImage: {
 				'gradient-hero': 'var(--gradient-hero)',
 				'gradient-premium': 'var(--gradient-premium)',
+				'gradient-mesh': 'var(--gradient-mesh)',
 			},
 			boxShadow: {
 				'premium': 'var(--shadow-premium)',
 				'elegant': 'var(--shadow-elegant)',
+				'glow': 'var(--shadow-glow)',
+			},
+			transitionTimingFunction: {
+				'premium': 'cubic-bezier(0.23, 1, 0.32, 1)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
