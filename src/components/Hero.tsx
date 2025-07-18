@@ -17,9 +17,69 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-hero"></div>
       <div className="absolute inset-0 bg-gradient-mesh opacity-40"></div>
       
-      {/* Animated background elements */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-blue-400/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      {/* Floating Financial Elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        {/* Floating Chart */}
+        <div className="absolute top-20 left-10 w-24 h-16 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 animate-pulse delay-100 transform rotate-12">
+          <div className="p-3">
+            <div className="flex items-end h-8 space-x-1">
+              <div className="w-1 h-3 bg-blue-300 rounded"></div>
+              <div className="w-1 h-6 bg-blue-400 rounded"></div>
+              <div className="w-1 h-4 bg-blue-300 rounded"></div>
+              <div className="w-1 h-8 bg-blue-500 rounded"></div>
+            </div>
+          </div>
+        </div>
+
+        {/* Floating Dollar Sign */}
+        <div className="absolute top-1/3 right-16 w-16 h-16 bg-white/5 backdrop-blur-sm rounded-full border border-white/20 flex items-center justify-center animate-pulse delay-300 transform -rotate-12">
+          <span className="text-2xl font-bold text-white/70">$</span>
+        </div>
+
+        {/* Floating Calculator */}
+        <div className="absolute bottom-32 left-20 w-20 h-24 bg-white/8 backdrop-blur-sm rounded-lg border border-white/20 animate-pulse delay-500 transform rotate-6">
+          <div className="p-2">
+            <div className="w-full h-3 bg-white/20 rounded mb-1"></div>
+            <div className="grid grid-cols-3 gap-1">
+              <div className="w-3 h-2 bg-white/15 rounded"></div>
+              <div className="w-3 h-2 bg-white/15 rounded"></div>
+              <div className="w-3 h-2 bg-white/15 rounded"></div>
+              <div className="w-3 h-2 bg-white/15 rounded"></div>
+              <div className="w-3 h-2 bg-white/15 rounded"></div>
+              <div className="w-3 h-2 bg-white/15 rounded"></div>
+            </div>
+          </div>
+        </div>
+
+        {/* Floating Document */}
+        <div className="absolute top-40 right-32 w-16 h-20 bg-white/6 backdrop-blur-sm rounded border border-white/20 animate-pulse delay-700 transform -rotate-6">
+          <div className="p-2">
+            <div className="w-full h-1 bg-white/30 rounded mb-1"></div>
+            <div className="w-3/4 h-1 bg-white/20 rounded mb-1"></div>
+            <div className="w-full h-1 bg-white/20 rounded mb-1"></div>
+            <div className="w-2/3 h-1 bg-white/20 rounded"></div>
+          </div>
+        </div>
+
+        {/* Floating Coins */}
+        <div className="absolute bottom-40 right-10 flex space-x-2 animate-pulse delay-900">
+          <div className="w-8 h-8 bg-yellow-400/20 backdrop-blur-sm rounded-full border border-yellow-300/30 transform rotate-12"></div>
+          <div className="w-6 h-6 bg-yellow-400/15 backdrop-blur-sm rounded-full border border-yellow-300/20 transform -rotate-6"></div>
+        </div>
+
+        {/* Floating Pie Chart */}
+        <div className="absolute top-60 left-1/4 w-20 h-20 bg-white/5 backdrop-blur-sm rounded-full border border-white/20 animate-pulse delay-1100 transform rotate-45">
+          <div className="relative w-full h-full rounded-full overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-400/30 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-l from-blue-300/20 to-transparent transform rotate-90"></div>
+          </div>
+        </div>
+
+        {/* Floating Growth Arrow */}
+        <div className="absolute bottom-20 left-1/3 w-12 h-12 bg-green-400/10 backdrop-blur-sm rounded border border-green-300/30 animate-pulse delay-1300 transform rotate-12 flex items-center justify-center">
+          <div className="w-4 h-4 border-t-2 border-r-2 border-green-400/60 transform rotate-45"></div>
+        </div>
+      </div>
       
       <div className="relative z-10 container mx-auto px-6 py-32">
         <div className="max-w-5xl mx-auto text-center">
