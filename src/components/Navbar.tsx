@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
+import blasLogo from '@/assets/blas-logo.png';
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState('hero');
@@ -28,9 +29,10 @@ const Navbar = () => {
           {/* Logo/Name */}
           <button
             onClick={() => scrollToSection('hero')}
-            className="text-xl font-bold text-primary-foreground hover:text-white transition-premium transform hover:scale-105"
+            className="flex items-center space-x-2 text-xl font-bold text-primary-foreground hover:text-white transition-premium transform hover:scale-105"
           >
-            Blas Chiaretta
+            <img src={blasLogo} alt="Blas Logo" className="h-8 w-8 object-contain" />
+            <span>Blas Chiaretta</span>
           </button>
 
           {/* Navigation Links */}
