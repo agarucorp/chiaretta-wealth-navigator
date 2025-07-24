@@ -28,19 +28,19 @@ const Advisory = () => {
   ];
 
   return (
-    <section id="advisory" className="py-20 bg-background">
+    <section id="advisory" className="py-20" style={{ background: '#f3f4f8' }}>
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           {/* Textos a la izquierda */}
-          <div className="space-y-6">
+          <div className="space-y-6" style={{ color: '#1a237e' }}>
             <h3 className="text-sm font-semibold mb-2 uppercase tracking-widest" style={{ color: '#60aaff' }}>{t('advisory.title')}</h3>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4" style={{ fontFamily: 'Mulish, sans-serif', fontWeight: 300 }}>{t('advisory.subtitle')}</h2>
-            <p className="text-lg text-foreground/80 leading-relaxed mb-8" style={{ fontFamily: 'sans-serif' }}>{t('advisory.description')}</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ fontFamily: 'Mulish, sans-serif', fontWeight: 300 }}>{t('advisory.subtitle')}</h2>
+            <p className="text-base leading-relaxed mb-8" style={{ fontFamily: 'sans-serif', fontSize: '16px' }}>{t('advisory.description')}</p>
             <div className="space-y-4">
               {features.map((feature, index) => (
                 <div key={index} className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
-                  <p className="text-base text-foreground/90 leading-relaxed">{feature}</p>
+                  <div className="w-2 h-2 rounded-full mt-2 flex-shrink-0" style={{ backgroundColor: '#60aaff' }} />
+                  <p className="text-sm leading-relaxed" style={{ fontSize: '14px' }}>{feature}</p>
                 </div>
               ))}
             </div>

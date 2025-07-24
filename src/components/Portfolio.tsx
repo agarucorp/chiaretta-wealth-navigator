@@ -12,7 +12,7 @@ const Portfolio = () => {
   ];
 
   return (
-    <section id="portfolio" className="py-20 bg-muted/30">
+    <section id="portfolio" className="py-20" style={{ background: '#fff' }}>
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           {/* Header */}

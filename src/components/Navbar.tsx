@@ -48,10 +48,10 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-500 ${scrolled ? '' : 'bg-transparent'} backdrop-blur-md`}
-      style={scrolled ? { backgroundColor: 'rgba(30,35,65,0.85)' } : { backgroundColor: 'transparent' }}
+      style={{ fontFamily: 'Public Sans, sans-serif', backgroundColor: scrolled ? 'rgba(30,35,65,0.85)' : 'transparent' }}
     >
       <div className="container mx-auto py-3">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between relative">
           {/* Logo */}
           <button
             onClick={() => scrollToSection('hero')}
@@ -63,12 +63,12 @@ const Navbar = () => {
           </button>
 
           {/* Navigation Links */}
-          <div className="hidden md:flex items-center space-x-12">
+          <div className="hidden md:flex items-center space-x-12 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`relative py-3 px-2 text-xs font-medium transition-premium group ${
+                className={`relative py-3 px-2 text-sm font-medium transition-premium group ${
                   activeSection === item.id ? 'text-white' : 'text-primary-foreground/90 hover:text-white'
                 }`}
               >
