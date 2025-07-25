@@ -39,22 +39,32 @@ const About = () => {
               </p>
               {/* 2x2 grid de items con flecha */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 mt-6">
-                <div className="flex items-center">
-                  <svg width="20" height="20" fill="none" viewBox="0 0 20 20" className="text-primary mr-2"><path d="M4 10h12m-4-4 4 4-4 4" stroke="#1a237e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                  <span className="text-sm font-medium text-[#1a237e]">Sectoral & Strategic Insight</span>
+                <div className="flex items-center group">
+                  <svg width="20" height="20" fill="none" viewBox="0 0 20 20" className="text-primary mr-2 transition-transform duration-200 group-hover:scale-110"><path d="M4 10h12m-4-4 4 4-4 4" stroke="#1a237e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                  <span className="text-sm font-medium text-[#1a237e] transition-transform duration-200 group-hover:scale-110">Sectoral & Strategic Insight</span>
                 </div>
-                <div className="flex items-center">
-                  <svg width="20" height="20" fill="none" viewBox="0 0 20 20" className="text-primary mr-2"><path d="M4 10h12m-4-4 4 4-4 4" stroke="#1a237e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                  <span className="text-sm font-medium text-[#1a237e]">Global & Adaptive Perspective</span>
+                <div className="flex items-center group">
+                  <svg width="20" height="20" fill="none" viewBox="0 0 20 20" className="text-primary mr-2 transition-transform duration-200 group-hover:scale-110"><path d="M4 10h12m-4-4 4 4-4 4" stroke="#1a237e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                  <span className="text-sm font-medium text-[#1a237e] transition-transform duration-200 group-hover:scale-110">Global & Adaptive Perspective</span>
                 </div>
-                <div className="flex items-center">
-                  <svg width="20" height="20" fill="none" viewBox="0 0 20 20" className="text-primary mr-2"><path d="M4 10h12m-4-4 4 4-4 4" stroke="#1a237e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                  <span className="text-sm font-medium text-[#1a237e]">Truly Personalized Attention</span>
+                <div className="flex items-center group">
+                  <svg width="20" height="20" fill="none" viewBox="0 0 20 20" className="text-primary mr-2 transition-transform duration-200 group-hover:scale-110"><path d="M4 10h12m-4-4 4 4-4 4" stroke="#1a237e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                  <span className="text-sm font-medium text-[#1a237e] transition-transform duration-200 group-hover:scale-110">Truly Personalized Attention</span>
                 </div>
-                <div className="flex items-center">
-                  <svg width="20" height="20" fill="none" viewBox="0 0 20 20" className="text-primary mr-2"><path d="M4 10h12m-4-4 4 4-4 4" stroke="#1a237e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                  <span className="text-sm font-medium text-[#1a237e]">Performance-Driven Commitment</span>
+                <div className="flex items-center group">
+                  <svg width="20" height="20" fill="none" viewBox="0 0 20 20" className="text-primary mr-2 transition-transform duration-200 group-hover:scale-110"><path d="M4 10h12m-4-4 4 4-4 4" stroke="#1a237e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                  <span className="text-sm font-medium text-[#1a237e] transition-transform duration-200 group-hover:scale-110">Performance-Driven Commitment</span>
                 </div>
+              </div>
+              {/* Línea divisoria punteada */}
+              <div className="w-full flex justify-center my-6">
+                <div className="w-full border-t-2 border-dotted border-[#1a237e]/10"></div>
+              </div>
+              {/* Idiomas */}
+              <div className="w-full flex justify-center">
+                <span className="text-[13px] font-light tracking-wide text-[#1a237e]" style={{ fontFamily: 'Public Sans, sans-serif', letterSpacing: 1 }}>
+                  English <span className="mx-2 text-[#60aaff]">|</span> Spanish <span className="mx-2 text-[#60aaff]">|</span> Italian <span className="mx-2 text-[#60aaff]">|</span> Portuguese
+                </span>
               </div>
             </div>
             {/* Professional Image + Education */}
@@ -68,7 +78,7 @@ const About = () => {
                 />
               </div>
               {/* Education debajo de la imagen */}
-              <div className="mt-4 w-[28.8rem] flex flex-col items-start lg:items-start ml-0">
+              <div className="mt-10 w-[28.8rem] flex flex-col items-start lg:items-start ml-0">
                 <div className="flex items-center mb-3 ml-0">
                   <img src={logoDiTella} alt="Universidad Torcuato Di Tella" className="w-12 h-auto mr-3" />
                   <span className="leading-relaxed inline-block min-w-[220px] ml-8" style={{ fontSize: '13px', color: '#1a237e', fontFamily: 'Mulish, sans-serif' }}>

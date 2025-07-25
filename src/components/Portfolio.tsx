@@ -16,26 +16,41 @@ const Portfolio = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-              {t('portfolio.title')}
+          <div className="text-left mb-16 max-w-xl mx-0">
+            <h2
+              className="text-sm font-semibold mb-2 uppercase tracking-widest"
+              style={{ color: '#60aaff', fontFamily: 'Public Sans, sans-serif', fontSize: 16 }}
+            >
+              {t('portfolio.title').toUpperCase()}
             </h2>
-            <h3 className="text-xl md:text-2xl text-muted-foreground mb-8">
+            <h3
+              className="mb-2"
+              style={{ fontFamily: 'Poppins', fontWeight: 700, fontSize: '34px', color: '#1a237e', textAlign: 'left' }}
+            >
               {t('portfolio.subtitle')}
             </h3>
-            <p className="text-lg max-w-3xl mx-auto leading-relaxed" style={{ color: '#4a5568' }}>
-              {t('portfolio.description')}
+            <div className="w-24 h-1 rounded-full mb-4" style={{ background: 'linear-gradient(90deg, #1a237e 0%, #60aaff 100%)' }} />
+            <p
+              className="text-lg leading-relaxed mb-8"
+              style={{ color: '#1a237e', fontFamily: 'Mulish, sans-serif', fontSize: '15px', textAlign: 'left' }}
+            >
+              Through an in-depth analysis of your financial background, goals, and risk tolerance, I construct a <strong>tailored portfolio</strong> designed to enhance your purchasing power and achieve your specific short-, medium-, and long-term objectives.<br/><br/>
+              My compensation is directly tied to your success via a <strong>performance fee</strong> – I earn only when your portfolio generates gains. This commitment ensures our interests are perfectly aligned, fostering a transparent partnership focused on maximizing your returns.
             </p>
           </div>
 
-          {/* Key Features Grid */}
+          {/* Key Features Grid (restaurado) */}
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             {features.map((feature, index) => (
-              <Card key={index} className="border border-border/50 shadow-elegant hover:shadow-premium transition-all duration-300">
-                <CardContent className="p-8">
+              <Card
+                key={index}
+                className="bg-white border-0 shadow-[0_4px_32px_0_rgba(30,40,80,0.07)] hover:shadow-[0_8px_40px_0_rgba(30,40,80,0.13)] transition-all duration-400 rounded-xl p-0"
+                style={{ transitionProperty: 'box-shadow, transform', willChange: 'transform' }}
+              >
+                <CardContent className="p-10">
                   <div className="flex items-start space-x-4">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-3 flex-shrink-0" />
-                    <p className="text-lg font-medium text-foreground leading-relaxed">
+                    <div className="w-2 h-2 bg-[#60aaff] rounded-full mt-3 flex-shrink-0" />
+                    <p className="text-lg font-medium text-[#1a237e] leading-relaxed font-sans" style={{ fontFamily: 'Mulish, sans-serif' }}>
                       {feature}
                     </p>
                   </div>
@@ -47,24 +62,26 @@ const Portfolio = () => {
           {/* Highlighted Features */}
           <div className="grid md:grid-cols-2 gap-8">
             {/* Personalized Service */}
-            <Card className="bg-gradient-premium text-primary-foreground shadow-premium">
-              <CardContent className="p-8">
-                <h4 className="text-2xl font-bold mb-4">
+            <Card className="bg-white border-0 shadow-[0_4px_32px_0_rgba(30,40,80,0.07)] hover:shadow-[0_8px_40px_0_rgba(30,40,80,0.13)] transition-all duration-400 rounded-xl p-0"
+              style={{ transitionProperty: 'box-shadow, transform', willChange: 'transform' }}>
+              <CardContent className="p-10">
+                <h4 className="text-2xl font-bold mb-4 text-[#1a237e] font-sans" style={{ fontFamily: 'Poppins, sans-serif' }}>
                   {t('portfolio.personalized.title')}
                 </h4>
-                <p className="text-lg leading-relaxed text-primary-foreground/90">
+                <p className="text-lg leading-relaxed text-[#1a237e] font-sans" style={{ fontFamily: 'Mulish, sans-serif' }}>
                   {t('portfolio.personalized.description')}
                 </p>
               </CardContent>
             </Card>
 
             {/* Performance Fee */}
-            <Card className="bg-secondary text-secondary-foreground shadow-premium">
-              <CardContent className="p-8">
-                <h4 className="text-2xl font-bold mb-4">
+            <Card className="bg-white border-0 shadow-[0_4px_32px_0_rgba(30,40,80,0.07)] hover:shadow-[0_8px_40px_0_rgba(30,40,80,0.13)] transition-all duration-400 rounded-xl p-0"
+              style={{ transitionProperty: 'box-shadow, transform', willChange: 'transform' }}>
+              <CardContent className="p-10">
+                <h4 className="text-2xl font-bold mb-4 text-[#1a237e] font-sans" style={{ fontFamily: 'Poppins, sans-serif' }}>
                   {t('portfolio.performance.title')}
                 </h4>
-                <p className="text-lg leading-relaxed text-secondary-foreground/90">
+                <p className="text-lg leading-relaxed text-[#1a237e] font-sans" style={{ fontFamily: 'Mulish, sans-serif' }}>
                   {t('portfolio.performance.description')}
                 </p>
               </CardContent>
