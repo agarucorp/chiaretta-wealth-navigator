@@ -69,7 +69,11 @@ const Index = () => {
               {/* Logo & Name */}
               <div className="flex-1 mb-8 md:mb-0 flex flex-col items-start">
                 <div className="flex items-center mb-4">
-                  <span className="text-2xl font-bold tracking-wide">Blas Chiaretta</span>
+                  <img 
+                    src="/blas-logo.png" 
+                    alt="Blas Chiaretta Logo" 
+                    className="h-10 w-auto"
+                  />
                 </div>
                 <p className="text-sm text-white/70 max-w-xs">Premium financial advisory and tailored asset management for discerning clients worldwide.</p>
               </div>
