@@ -65,7 +65,7 @@ const Navbar = () => {
           </button>
 
           {/* Navigation Links */}
-          <div className="hidden md:flex items-center space-x-12 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+          <div className="hidden md:flex items-center space-x-12 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" style={{ fontFamily: 'Public Sans, sans-serif' }}>
             {navItems.map((item) => (
               <button
                 key={item.id}
@@ -73,6 +73,7 @@ const Navbar = () => {
                 className={`relative py-3 px-2 text-sm font-medium transition-premium group ${
                   activeSection === item.id ? 'text-white' : 'text-primary-foreground/90 hover:text-white'
                 }`}
+                style={{ fontFamily: 'Public Sans, sans-serif' }}
               >
                 {item.label}
                 <span

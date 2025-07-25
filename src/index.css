@@ -122,3 +122,35 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Utilidad para rotación 3D eje Y (flip horizontal) */
+.rotate-y-180 {
+  transform: rotateY(180deg);
+  transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Utilidades para animación 3D de giro sobre eje Y */
+.perspective {
+  perspective: 600px;
+}
+.rotate-y-0 {
+  transform: rotateY(0deg);
+  transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.rotate-y-180 {
+  transform: rotateY(180deg);
+  transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes spin-360 {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.spin-360-hover {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: rotate(0deg);
+}
+.group:hover .spin-360-hover {
+  transform: rotate(360deg);
+}

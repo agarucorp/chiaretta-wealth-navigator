@@ -18,12 +18,13 @@ const About = () => {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-left">
-            <h2 className="font-bold text-primary mb-6" style={{ fontSize: '16px', letterSpacing: '2px' }}>
+            <h2 className="text-sm font-semibold mb-2 uppercase tracking-widest" style={{ color: '#60aaff', fontFamily: 'Public Sans, sans-serif' }}>
               ABOUT
             </h2>
-            <h3 className="mb-2" style={{ fontFamily: 'Poppins', fontWeight: 700, fontSize: '36px', color: '#1a237e' }}>
+            <h3 className="mb-2" style={{ fontFamily: 'Poppins', fontWeight: 700, fontSize: '34px', color: '#1a237e' }}>
               I'm here to manage your<br/>finance with experience
             </h3>
+            <div className="w-24 h-1 rounded-full mb-4" style={{ background: 'linear-gradient(90deg, #1a237e 0%, #60aaff 100%)' }} />
           </div>
           <div className="mb-4" />
 
@@ -31,7 +32,7 @@ const About = () => {
             {/* Content */}
             <div className="space-y-8 order-2 lg:order-1">
               {/* Description */}
-              <p className="text-foreground/80 leading-relaxed" style={{ fontSize: '16px', color: '#1a237e' }}>
+              <p className="text-foreground/80 leading-relaxed" style={{ fontSize: '15px', color: '#1a237e', fontFamily: 'Mulish, sans-serif' }}>
                 Drawing on extensive experience within the Banking and Energy sectors, I bring a unique blend of analytical rigor and global adaptability to personal wealth management. 
                 My career has involved navigating diverse economic landscapes and cultures, shaping my ability to craft resilient financial strategies tailored to individual circumstances.<br/><br/>
                 My core drive is to identify growth opportunities and ensure your financial future is not just secure, but thriving.
@@ -62,21 +63,21 @@ const About = () => {
                 <img
                   src={blasPortrait}
                   alt="Blas Chiaretta - Financial Advisor"
-                  className="w-[32rem] h-[24rem] object-cover object-top rounded-lg self-start"
+                  className="w-[28.8rem] h-[21.6rem] object-cover rounded-lg self-start shadow-2xl"
                   style={{ objectPosition: 'center 20%' }}
                 />
               </div>
               {/* Education debajo de la imagen */}
-              <div className="mt-4 w-[32rem] flex flex-col items-start lg:items-start">
+              <div className="mt-4 w-[28.8rem] flex flex-col items-start lg:items-start ml-0">
                 <div className="flex items-center mb-3 ml-0">
-                  <img src={logoDiTella} alt="Universidad Torcuato Di Tella" className="w-10 h-10 mr-3" />
-                  <span className="leading-relaxed inline-block min-w-[220px] ml-6" style={{ fontSize: '15px', color: '#1a237e' }}>
+                  <img src={logoDiTella} alt="Universidad Torcuato Di Tella" className="w-12 h-auto mr-3" />
+                  <span className="leading-relaxed inline-block min-w-[220px] ml-8" style={{ fontSize: '13px', color: '#1a237e', fontFamily: 'Mulish, sans-serif' }}>
                     Universidad Torcuato Di Tella - Business Economics Degree
                   </span>
                 </div>
                 <div className="flex items-center">
                   <img src={logoPompeu} alt="UPF Barcelona School of Management" className="w-20 h-auto mr-3" />
-                  <span className="leading-relaxed inline-block min-w-[220px]" style={{ fontSize: '15px', color: '#1a237e' }}>
+                  <span className="leading-relaxed inline-block min-w-[220px]" style={{ fontSize: '13px', color: '#1a237e', fontFamily: 'Mulish, sans-serif' }}>
                     UPF - Master in Finance and Banking
                   </span>
                 </div>
