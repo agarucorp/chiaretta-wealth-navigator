@@ -23,7 +23,7 @@ const Portfolio = () => {
             <h3 className="text-xl md:text-2xl text-muted-foreground mb-8">
               {t('portfolio.subtitle')}
             </h3>
-            <p className="text-lg max-w-3xl mx-auto leading-relaxed" style={{ color: '#1a237e' }}>
+            <p className="text-lg max-w-3xl mx-auto leading-relaxed" style={{ color: '#4a5568' }}>
               {t('portfolio.description')}
             </p>
           </div>
