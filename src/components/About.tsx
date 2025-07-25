@@ -62,7 +62,8 @@ const About = () => {
                 <img
                   src={blasPortrait}
                   alt="Blas Chiaretta - Financial Advisor"
-                  className="w-[32rem] h-[24rem] object-cover rounded-lg self-start"
+                  className="w-[32rem] h-[24rem] object-cover object-top rounded-lg self-start"
+                  style={{ objectPosition: 'center 20%' }}
                 />
               </div>
               {/* Education debajo de la imagen */}
