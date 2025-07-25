@@ -61,7 +61,7 @@ const Contact = () => {
             <h3 className="text-xl md:text-2xl text-muted-foreground mb-8">
               {t('contact.subtitle')}
             </h3>
-            <p className="text-lg text-foreground/80 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg max-w-2xl mx-auto leading-relaxed" style={{ color: '#4a5568' }}>
               {t('contact.description')}
             </p>
           </div>
