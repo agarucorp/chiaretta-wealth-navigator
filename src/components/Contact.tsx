@@ -6,7 +6,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Mail, MessageSquare, Globe } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
-import whatsappIcon from '@/assets/whatsapp.png';
+import whatsappIcon from '@/assets/WhatsApp.png';
 
 const Contact = () => {
   const { t } = useLanguage();
