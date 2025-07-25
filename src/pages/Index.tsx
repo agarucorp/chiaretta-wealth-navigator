@@ -72,7 +72,7 @@ const Index = () => {
                   <img 
                     src="/blas-logo.png" 
                     alt="Blas Chiaretta Logo" 
-                    className="h-50 w-auto"
+                    className="h-10 w-auto"
                   />
                 </div>
                 <p className="text-sm text-white/70 max-w-xs">Premium financial advisory and tailored asset management for discerning clients worldwide.</p>

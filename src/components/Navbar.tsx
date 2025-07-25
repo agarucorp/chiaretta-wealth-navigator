@@ -60,7 +60,7 @@ const Navbar = () => {
             <img 
               src="/blas-logo.png" 
               alt="Blas Chiaretta Logo" 
-              className="h-40 w-auto"
+              className="h-8 w-auto"
             />
           </button>
 
