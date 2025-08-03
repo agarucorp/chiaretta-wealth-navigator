@@ -58,7 +58,7 @@ const translations = {
     
     // Contact Section
     'contact.title': 'Get in Touch',
-    'contact.subtitle': 'Schedule Your Consultation',
+    'contact.subtitle': '',
     'contact.description': 'Ready to take your financial strategy to the next level? Contact me for a personalized consultation.',
     'contact.form.name': 'Full Name',
     'contact.form.email': 'Email Address',
@@ -117,7 +117,7 @@ const translations = {
     
     // Contact Section
     'contact.title': 'Contáctame',
-    'contact.subtitle': 'Agenda Tu Consulta',
+    'contact.subtitle': '',
     'contact.description': '¿Listo para llevar tu estrategia financiera al siguiente nivel? Contáctame para una consulta personalizada.',
     'contact.form.name': 'Nombre Completo',
     'contact.form.email': 'Correo Electrónico',

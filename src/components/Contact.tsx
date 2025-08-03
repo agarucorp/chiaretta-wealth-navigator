@@ -6,12 +6,8 @@ import { Textarea } from '@/components/ui/textarea';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Mail, MessageSquare, Globe } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
-<<<<<<< HEAD
-=======
-import whatsappIcon from '@/assets/WhatsApp.png';
 import emailjs from '@emailjs/browser';
 import { Skeleton } from '@/components/ui/skeleton';
->>>>>>> c6bd19b948b408a0c103e038e9946b518ab8267b
 
 const Contact = () => {
   const { t } = useLanguage();
@@ -122,13 +118,10 @@ const Contact = () => {
         <div className="max-w-2xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6 georgia-font" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif !important' }}>
               {t('contact.title')}
             </h2>
-            <h3 className="text-xl md:text-2xl text-muted-foreground mb-8">
-              {t('contact.subtitle')}
-            </h3>
-            <p className="text-lg max-w-2xl mx-auto leading-relaxed" style={{ color: '#4a5568' }}>
+            <p className="text-lg max-w-2xl mx-auto leading-relaxed" style={{ color: '#4a5568', fontFamily: 'Mulish, sans-serif' }}>
               {t('contact.description')}
             </p>
           </div>
