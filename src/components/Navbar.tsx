@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Globe } from 'lucide-react';
+import { Globe, X } from 'lucide-react';
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState('hero');
   const { language, setLanguage, t } = useLanguage();
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -59,7 +60,8 @@ const Navbar = () => {
       style={{ fontFamily: 'Public Sans, sans-serif', backgroundColor: scrolled ? 'rgba(30,35,65,0.85)' : 'transparent' }}
     >
       <div className="container mx-auto py-3">
-        <div className="flex items-center justify-between relative">
+        {/* Web Navbar */}
+        <div className="hidden md:flex items-center justify-between relative">
           {/* Logo */}
           <button
             onClick={() => scrollToSection('hero')}
@@ -73,7 +75,7 @@ const Navbar = () => {
           </button>
 
           {/* Navigation Links */}
-          <div className="hidden md:flex items-center space-x-12 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" style={{ fontFamily: 'Public Sans, sans-serif' }}>
+          <div className="flex items-center space-x-12 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" style={{ fontFamily: 'Public Sans, sans-serif' }}>
             {navItems.map((item) => (
               <button
                 key={item.id}
@@ -96,7 +98,6 @@ const Navbar = () => {
                 />
               </button>
             ))}
-            
           </div>
 
           {/* Language Toggle */}
@@ -110,6 +111,76 @@ const Navbar = () => {
               <span className="text-[10px] font-semibold">{language.toUpperCase()}</span>
             </button>
           </div>
+        </div>
+
+        {/* Mobile Navbar */}
+        <div className="flex md:hidden items-center justify-between relative h-14">
+          {/* Logo perfectamente centrado usando posicionamiento absoluto y flex */}
+          <div className="flex-1 flex items-center justify-center relative">
+            <span className="absolute left-0 flex items-center h-full">
+              <span className="w-10" />
+            </span>
+            <button onClick={() => scrollToSection('hero')} className="flex items-center z-10">
+              <img 
+                src="/blas-logo.png" 
+                alt="Blas Chiaretta Logo" 
+                className="h-10 w-auto"
+              />
+            </button>
+            <span className="absolute right-0 flex items-center h-full">
+              <button
+                onClick={() => setMenuOpen(true)}
+                className="p-2 rounded-full transition-all flex items-center justify-center active:scale-90 focus:outline-none focus:ring-2 focus:ring-[#60aaff]"
+                aria-label="Abrir menú"
+                style={{}}
+              >
+                {/* Icono hamburguesa más fino, color depende de scrolled */}
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect y="5.5" width="24" height="1.5" rx="0.75" fill={scrolled ? '#60aaff' : '#1a237e'} />
+                  <rect y="11.25" width="24" height="1.5" rx="0.75" fill={scrolled ? '#60aaff' : '#1a237e'} />
+                  <rect y="17" width="24" height="1.5" rx="0.75" fill={scrolled ? '#60aaff' : '#1a237e'} />
+                </svg>
+              </button>
+            </span>
+          </div>
+
+          {/* Menú hamburguesa estándar dropdown */}
+          {menuOpen && (
+            <div className="fixed inset-0 z-50">
+              {/* Fondo oscuro semitransparente */}
+              <div className="absolute inset-0 bg-black/40" onClick={() => setMenuOpen(false)}></div>
+              {/* Menú dropdown con fondo acorde a la página */}
+              <div className="absolute top-0 left-0 w-full flex flex-col animate-slide-in-down bg-[#f3f4f8] shadow-xl">
+                <button
+                  onClick={() => setMenuOpen(false)}
+                  className="absolute top-4 right-4 text-[#1a237e] hover:text-[#60aaff] transition-colors"
+                  aria-label="Cerrar menú"
+                >
+                  <X className="w-7 h-7" />
+                </button>
+                <nav className="flex flex-col gap-2 py-16 px-8">
+                  {navItems.map((item) => (
+                    <button
+                      key={item.id}
+                      onClick={() => { setMenuOpen(false); scrollToSection(item.id); }}
+                      className={`text-lg font-semibold text-[#1a237e] text-left py-3 px-2 rounded-md transition-colors duration-200 hover:bg-[#e3e8f0] hover:text-[#60aaff] ${activeSection === item.id ? 'text-[#60aaff]' : ''}`}
+                    >
+                      {item.label}
+                    </button>
+                  ))}
+                </nav>
+                <div className="flex justify-center mt-8 mb-4">
+                  <button
+                    onClick={() => setLanguage(language === 'en' ? 'es' : 'en')}
+                    className="flex items-center space-x-1 text-[#1a237e] hover:text-[#60aaff] transition-colors text-base font-semibold"
+                    aria-label="Cambiar idioma"
+                  >
+                    <span>{language === 'en' ? 'ES' : 'EN'}</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </nav>
