@@ -12,17 +12,25 @@ const Navbar = () => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
       // Scrollspy logic
-      const sectionIds = ['hero', 'advisory', 'portfolio', 'about', 'contact'];
+      const sectionIds = ['hero', 'about', 'advisory', 'portfolio', 'contact'];
       let currentSection = 'hero';
+      
+      const scrollPosition = window.scrollY + 100; // Offset for navbar height
+      
       for (const id of sectionIds) {
         const section = document.getElementById(id);
         if (section) {
-          const rect = section.getBoundingClientRect();
-          if (rect.top <= 80) {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.offsetHeight;
+          
+          // Check if current scroll position is within this section
+          if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
             currentSection = id;
+            break; // Use the first matching section
           }
         }
       }
+      
       setActiveSection(currentSection);
     };
     window.addEventListener('scroll', handleScroll);
@@ -39,9 +47,9 @@ const Navbar = () => {
   };
 
   const navItems = [
+    { id: 'about', label: t('nav.about') },
     { id: 'advisory', label: t('nav.advisory') },
     { id: 'portfolio', label: t('nav.portfolio') },
-    { id: 'about', label: t('nav.about') },
     { id: 'contact', label: t('nav.contact') },
   ];
 

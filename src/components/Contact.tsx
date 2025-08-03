@@ -6,7 +6,6 @@ import { Textarea } from '@/components/ui/textarea';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Mail, MessageSquare, Globe } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
-import whatsappIcon from '@/assets/WhatsApp.png';
 
 const Contact = () => {
   const { t } = useLanguage();
@@ -33,12 +32,6 @@ const Contact = () => {
       ...prev,
       [e.target.name]: e.target.value
     }));
-  };
-
-  const handleWhatsApp = () => {
-    const message = `Hello Blas, I'm interested in your financial advisory services.`;
-    const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/?text=${encodedMessage}`, '_blank');
   };
 
   const handleEmail = () => {
@@ -136,21 +129,6 @@ const Contact = () => {
           </form>
         </div>
       </div>
-      {/* Floating WhatsApp Icon */}
-      <a
-        href="https://wa.me/54923557141"
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{ position: 'fixed', right: '2.5rem', bottom: '2.5rem', zIndex: 50 }}
-        className="group"
-      >
-        <img
-          src={whatsappIcon}
-          alt="WhatsApp"
-          className="w-14 h-14 rounded-full shadow-lg transition-transform duration-200 group-hover:scale-110 group-hover:shadow-2xl"
-          style={{ boxShadow: '0 4px 24px 0 rgba(30,40,80,0.18)' }}
-        />
-      </a>
     </section>
   );
 };

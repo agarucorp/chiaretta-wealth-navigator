@@ -21,7 +21,7 @@ const About = () => {
             <h2 className="text-sm font-semibold mb-2 uppercase tracking-widest" style={{ color: '#60aaff', fontFamily: 'Public Sans, sans-serif' }}>
               ABOUT
             </h2>
-            <h3 className="mb-2" style={{ fontFamily: 'Poppins', fontWeight: 700, fontSize: '34px', color: '#1a237e' }}>
+            <h3 className="mb-2 georgia-font" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif !important', fontWeight: 700, fontSize: '34px', color: '#1a237e' }}>
               I'm here to manage your<br/>finance with experience
             </h3>
             <div className="w-24 h-1 rounded-full mb-4" style={{ background: 'linear-gradient(90deg, #1a237e 0%, #60aaff 100%)' }} />
