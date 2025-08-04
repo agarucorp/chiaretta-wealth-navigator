@@ -75,7 +75,34 @@ const Portfolio = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto mt-8">
           {/* Content and Image */}
-          <div className="flex justify-between items-start">
+          {/* Mobile Version - No Image */}
+          <div className="block md:hidden">
+            <div className="max-w-xl">
+              <h2
+                className="text-sm font-semibold mb-2 uppercase tracking-widest"
+                style={{ color: '#60aaff', fontFamily: 'Public Sans, sans-serif', fontSize: 16 }}
+              >
+                {t('portfolio.title').toUpperCase()}
+              </h2>
+              <h3
+                className="mb-2 georgia-font"
+                style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif !important', fontWeight: 700, fontSize: '34px', color: '#1a237e', textAlign: 'left' }}
+              >
+                Are you ready for total transparency?
+              </h3>
+              <div className="w-24 h-1 rounded-full mb-4" style={{ background: 'linear-gradient(90deg, #1a237e 0%, #60aaff 100%)' }} />
+              <p
+                className="text-lg leading-relaxed"
+                style={{ color: '#1a237e', fontFamily: 'Mulish, sans-serif', fontSize: '15px', textAlign: 'left' }}
+              >
+                Through an in-depth analysis of your financial background, goals, and risk tolerance, I construct a <strong>tailored portfolio</strong> designed to enhance your purchasing power and achieve your specific short-, medium-, and long-term objectives.<br/><br/>
+                My compensation is directly tied to your success via a <strong>performance fee</strong> – I earn only when your portfolio generates gains. This commitment ensures our interests are perfectly aligned, fostering a transparent partnership focused on maximizing your returns.
+              </p>
+            </div>
+          </div>
+
+          {/* Web Version - With Image */}
+          <div className="hidden md:flex justify-between items-start">
             {/* Content */}
             <div className="max-w-xl">
               <h2

@@ -17,7 +17,38 @@ const Index = () => {
         {/* Premium Cards Section */}
         <section className="w-full pt-24 pb-12 bg-white">
           <div className="container mx-auto px-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {/* Mobile Version */}
+            <div className="block md:hidden max-w-6xl mx-auto">
+              {/* Card 1 */}
+              <div className="bg-gradient-to-l from-[#f3f4f8] to-[#fff] rounded-xl p-8 pt-24 flex flex-col items-center text-center min-h-[300px] relative group shadow-2xl hover:shadow-3xl transition-all duration-300 border border-gray-100">
+                <span className="perspective flex items-center justify-center w-24 h-24 rounded-full bg-gradient-to-br from-[#1a237e] to-[#2c3e50] absolute left-1/2 -translate-x-1/2 -top-12 z-10 group shadow-lg">
+                  {/* Icono gráfico premium */}
+                  <svg width="40" height="40" fill="none" viewBox="0 0 32 32" className="spin-360-hover">
+                    <rect x="7" y="17" width="3" height="8" rx="1.5" fill="#fff"/>
+                    <rect x="14" y="12" width="3" height="13" rx="1.5" fill="#fff"/>
+                    <rect x="21" y="7" width="3" height="18" rx="1.5" fill="#fff"/>
+                  </svg>
+                </span>
+                <h3 className="text-2xl font-bold mb-2 max-w-[280px] mx-auto georgia-font" style={{ color: '#1a237e', fontFamily: 'Georgia, "Times New Roman", Times, serif !important', fontWeight: 800 }}>Financial Consulting</h3>
+                <p className="max-w-[280px] mx-auto mt-6" style={{ color: '#1a237e', fontFamily: 'Mulish, sans-serif' }}>Receive expert, focused advice for your specific financial questions and challenges. Get clear, actionable insights to make informed decisions.</p>
+              </div>
+                             {/* Card 2 */}
+               <div className="bg-gradient-to-l from-[#f3f4f8] to-[#fff] rounded-xl p-8 pt-24 flex flex-col items-center text-center min-h-[300px] relative group shadow-2xl hover:shadow-3xl transition-all duration-300 border border-gray-100 mt-20">
+                <span className="perspective flex items-center justify-center w-24 h-24 rounded-full bg-gradient-to-br from-[#1a237e] to-[#2c3e50] absolute left-1/2 -translate-x-1/2 -top-12 z-10 group shadow-lg">
+                  {/* Icono portafolio premium */}
+                  <svg width="40" height="40" fill="none" viewBox="0 0 32 32" className="spin-360-hover">
+                    <rect x="6" y="12" width="20" height="12" rx="2" fill="#fff"/>
+                    <rect x="12" y="8" width="8" height="4" rx="2" fill="#fff"/>
+                    <rect x="10" y="16" width="12" height="2" rx="1" fill="#60aaff"/>
+                  </svg>
+                </span>
+                <h3 className="text-2xl font-bold mb-2 max-w-[280px] mx-auto georgia-font" style={{ color: '#1a237e', fontFamily: 'Georgia, "Times New Roman", Times, serif !important', fontWeight: 800 }}>Personalized Wealth</h3>
+                <p className="max-w-[280px] mx-auto mt-6" style={{ color: '#1a237e', fontFamily: 'Mulish, sans-serif' }}>Bespoke investment strategies designed around your unique goals, risk tolerance, and long-term financial objectives.</p>
+              </div>
+            </div>
+
+            {/* Web Version */}
+            <div className="hidden md:grid grid-cols-2 gap-8 max-w-6xl mx-auto">
               {/* Card 1 */}
               <div className="bg-gradient-to-l from-[#f3f4f8] to-[#fff] rounded-xl p-8 pt-24 flex flex-col items-center text-center min-h-[300px] relative group shadow-2xl hover:shadow-3xl transition-all duration-300 border border-gray-100">
                 <span className="perspective flex items-center justify-center w-24 h-24 rounded-full bg-gradient-to-br from-[#1a237e] to-[#2c3e50] absolute left-1/2 -translate-x-1/2 -top-12 z-10 group shadow-lg">

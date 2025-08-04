@@ -66,13 +66,28 @@ const Advisory = () => {
     <section id="advisory" className="py-20" style={{ background: '#f3f4f8' }}>
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          {/* Textos centrados */}
-          <div className="text-center space-y-6 mb-16" style={{ color: '#1a237e' }}>
-            <h3 className="text-sm font-semibold mb-2 uppercase tracking-widest" style={{ color: '#60aaff' }}>{t('advisory.title')}</h3>
-            <h2 className="mb-2 georgia-font" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif !important', fontWeight: 700, fontSize: '34px', color: '#1a237e' }}>We provide the guidance you need to make confident financial decisions</h2>
-            <p className="text-base leading-relaxed max-w-4xl mx-auto" style={{ fontFamily: 'Mulish, sans-serif', fontSize: '16px', color: '#1a237e' }}>
-              We offer personalized advisory services that begin with understanding your financial situation and optimizing cash flow. From there, we help build and protect your net worth through strategic, future-focused decisions. Whether assessing investment risks or planning major life events, our expert guidance supports your financial confidence.
-            </p>
+          {/* Mobile Version */}
+          <div className="block lg:hidden">
+            {/* Textos alineados a la izquierda */}
+            <div className="text-left space-y-6 mb-16" style={{ color: '#1a237e' }}>
+              <h3 className="text-sm font-semibold mb-2 uppercase tracking-widest" style={{ color: '#60aaff' }}>{t('advisory.title')}</h3>
+              <h2 className="mb-2 georgia-font" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif !important', fontWeight: 700, fontSize: '34px', color: '#1a237e' }}>We provide the guidance you need to make confident financial decisions</h2>
+              <p className="text-base leading-relaxed" style={{ fontFamily: 'Mulish, sans-serif', fontSize: '16px', color: '#1a237e' }}>
+                We offer personalized advisory services that begin with understanding your financial situation and optimizing cash flow. From there, we help build and protect your net worth through strategic, future-focused decisions. Whether assessing investment risks or planning major life events, our expert guidance supports your financial confidence.
+              </p>
+            </div>
+          </div>
+
+          {/* Web Version */}
+          <div className="hidden lg:block">
+            {/* Textos centrados */}
+            <div className="text-center space-y-6 mb-16" style={{ color: '#1a237e' }}>
+              <h3 className="text-sm font-semibold mb-2 uppercase tracking-widest" style={{ color: '#60aaff' }}>{t('advisory.title')}</h3>
+              <h2 className="mb-2 georgia-font" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif !important', fontWeight: 700, fontSize: '34px', color: '#1a237e' }}>We provide the guidance you need to make confident financial decisions</h2>
+              <p className="text-base leading-relaxed max-w-4xl mx-auto" style={{ fontFamily: 'Mulish, sans-serif', fontSize: '16px', color: '#1a237e' }}>
+                We offer personalized advisory services that begin with understanding your financial situation and optimizing cash flow. From there, we help build and protect your net worth through strategic, future-focused decisions. Whether assessing investment risks or planning major life events, our expert guidance supports your financial confidence.
+              </p>
+            </div>
           </div>
 
           {/* Carrusel Premium */}
@@ -87,7 +102,7 @@ const Advisory = () => {
             
             <button
               onClick={nextSlide}
-              className="absolute -right-16 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full shadow-lg hover:bg-white transition-all duration-300 flex items-center justify-center group"
+              className="absolute -right-16 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full shadow-lg hover:bg-white transition-all duration-300 flex items-center justify-center group hidden md:flex"
             >
               <ChevronRight className="w-6 h-6 text-[#1a237e] group-hover:text-[#60aaff] transition-colors" />
             </button>
@@ -102,10 +117,10 @@ const Advisory = () => {
                   <div key={index} className="w-full flex-shrink-0">
                     <div className="bg-gradient-to-br from-[#1a237e] to-[#2c3e50] rounded-2xl p-8 mx-4 h-48 flex flex-col justify-center">
                       <div className="text-center space-y-4">
-                        <h3 className="text-xl font-bold georgia-font" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif !important', color: '#ffffff' }}>
+                        <h3 className="text-xl font-bold georgia-font pt-4" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif !important', color: '#ffffff' }}>
                           {insight.title}
                         </h3>
-                        <p className="text-base leading-relaxed" style={{ fontFamily: 'Mulish, sans-serif', color: '#e5e7eb' }}>
+                        <p className="text-base leading-relaxed pb-4" style={{ fontFamily: 'Mulish, sans-serif', color: '#e5e7eb' }}>
                           {insight.text}
                         </p>
                       </div>
@@ -131,12 +146,29 @@ const Advisory = () => {
             </div>
           </div>
 
-          {/* Nueva sección Business Consulting */}
-          <div className="text-center space-y-6 mb-16" style={{ color: '#1a237e' }}>
-            <h2 className="mb-2 georgia-font" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif !important', fontWeight: 700, fontSize: '34px', color: '#1a237e' }}>Business Consulting & Strategy</h2>
-            <p className="text-base leading-relaxed max-w-4xl mx-auto" style={{ fontFamily: 'Mulish, sans-serif', fontSize: '16px', color: '#1a237e' }}>
-              We help businesses and startups strengthen their financial health through expert advisory and strategic planning. Our consulting services offer the insights and tools needed to overcome challenges, seize opportunities, and achieve sustainable growth in a competitive market.
-            </p>
+          {/* Mobile Version - Business Consulting */}
+          <div className="block lg:hidden">
+            {/* Nueva sección Business Consulting */}
+            <div className="text-left space-y-6 mb-16" style={{ color: '#1a237e' }}>
+              <h2 className="mb-2 georgia-font" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif !important', fontWeight: 700, fontSize: '34px', color: '#1a237e' }}>
+                Business Consulting<br/>
+                & Strategy
+              </h2>
+              <p className="text-base leading-relaxed" style={{ fontFamily: 'Mulish, sans-serif', fontSize: '16px', color: '#1a237e' }}>
+                We help businesses and startups strengthen their financial health through expert advisory and strategic planning. Our consulting services offer the insights and tools needed to overcome challenges, seize opportunities, and achieve sustainable growth in a competitive market.
+              </p>
+            </div>
+          </div>
+
+          {/* Web Version - Business Consulting */}
+          <div className="hidden lg:block">
+            {/* Nueva sección Business Consulting */}
+            <div className="text-center space-y-6 mb-16" style={{ color: '#1a237e' }}>
+              <h2 className="mb-2 georgia-font" style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif !important', fontWeight: 700, fontSize: '34px', color: '#1a237e' }}>Business Consulting & Strategy</h2>
+              <p className="text-base leading-relaxed max-w-4xl mx-auto" style={{ fontFamily: 'Mulish, sans-serif', fontSize: '16px', color: '#1a237e' }}>
+                We help businesses and startups strengthen their financial health through expert advisory and strategic planning. Our consulting services offer the insights and tools needed to overcome challenges, seize opportunities, and achieve sustainable growth in a competitive market.
+              </p>
+            </div>
           </div>
 
           {/* Premium Cards con efecto vidrioso */}
