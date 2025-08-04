@@ -4,7 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Mail, MessageSquare, Globe } from 'lucide-react';
+import { Mail, MessageSquare, Globe, Phone } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import emailjs from '@emailjs/browser';
 import { Skeleton } from '@/components/ui/skeleton';
@@ -12,9 +12,13 @@ import { Skeleton } from '@/components/ui/skeleton';
 const Contact = () => {
   const { t } = useLanguage();
   const { toast } = useToast();
+  
+
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '',
     subject: '',
     message: '',
   });
@@ -22,12 +26,14 @@ const Contact = () => {
   const [touched, setTouched] = useState({
     name: false,
     email: false,
+    phone: false,
     subject: false,
     message: false,
   });
   const [errors, setErrors] = useState({
     name: '',
     email: '',
+    phone: '',
     subject: '',
     message: '',
   });
@@ -39,6 +45,9 @@ const Contact = () => {
       case 'email':
         if (!value.trim()) return 'El email es obligatorio.';
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value) ? '' : 'Email inválido.';
+      case 'phone':
+        if (!value.trim()) return 'El teléfono es obligatorio.';
+        return /^[0-9\s\-\(\)]+$/.test(value) ? '' : 'Teléfono inválido.';
       case 'subject':
         return value ? '' : 'Elija un asunto.';
       case 'message':
@@ -62,6 +71,8 @@ const Contact = () => {
     }
   };
 
+
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
@@ -69,9 +80,10 @@ const Contact = () => {
       await emailjs.send(
         import.meta.env.VITE_EMAILJS_SERVICE_ID!,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID!,
-        {
+                         {
           from_name: formData.name,
           from_email: formData.email,
+          from_phone: formData.phone,
           subject: formData.subject,
           message: formData.message,
         },
@@ -81,7 +93,7 @@ const Contact = () => {
         title: 'Mensaje enviado',
         description: 'Gracias por tu consulta. Te responderé pronto.',
       });
-      setFormData({ name: '', email: '', subject: '', message: '' });
+      setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
     } catch (error) {
       toast({
         title: 'Error al enviar',
@@ -105,10 +117,12 @@ const Contact = () => {
   const isFormValid =
     formData.name.trim() &&
     /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email) &&
+    formData.phone.trim() &&
     formData.subject &&
     formData.message.trim() &&
     !errors.name &&
     !errors.email &&
+    !errors.phone &&
     !errors.subject &&
     !errors.message;
 
@@ -145,24 +159,44 @@ const Contact = () => {
                 <span className="text-xs text-red-500 mt-1 block">{errors.name}</span>
               )}
             </div>
-            <div className="relative mb-2">
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                onBlur={handleBlur}
-                required
-                className="block w-full bg-transparent border-0 border-b-2 border-[#b0b8c9] focus:border-[#60aaff] text-sm font-light px-0 pt-6 pb-2 transition-all duration-300 focus:outline-none text-[#1a237e]"
-                placeholder=" "
-                autoComplete="off"
-                id="contact-email"
-              />
-              <label htmlFor="contact-email" className={`absolute left-0 top-4 text-[#7a869a] text-sm font-light pointer-events-none transition-all duration-300 ${formData.email ? 'text-xs -top-1 text-[#60aaff]' : 'text-sm top-4'}`}>{t('contact.form.email')}</label>
-              {touched.email && errors.email && (
-                <span className="text-xs text-red-500 mt-1 block">{errors.email}</span>
-              )}
-            </div>
+                         <div className="relative mb-2">
+               <input
+                 type="email"
+                 name="email"
+                 value={formData.email}
+                 onChange={handleChange}
+                 onBlur={handleBlur}
+                 required
+                 className="block w-full bg-transparent border-0 border-b-2 border-[#b0b8c9] focus:border-[#60aaff] text-sm font-light px-0 pt-6 pb-2 transition-all duration-300 focus:outline-none text-[#1a237e]"
+                 placeholder=" "
+                 autoComplete="off"
+                 id="contact-email"
+               />
+               <label htmlFor="contact-email" className={`absolute left-0 top-4 text-[#7a869a] text-sm font-light pointer-events-none transition-all duration-300 ${formData.email ? 'text-xs -top-1 text-[#60aaff]' : 'text-sm top-4'}`}>{t('contact.form.email')}</label>
+               {touched.email && errors.email && (
+                 <span className="text-xs text-red-500 mt-1 block">{errors.email}</span>
+               )}
+             </div>
+             
+                           {/* Campo de teléfono */}
+              <div className="relative mb-2">
+                <input
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  required
+                  className="block w-full bg-transparent border-0 border-b-2 border-[#b0b8c9] focus:border-[#60aaff] text-sm font-light px-0 pt-6 pb-2 transition-all duration-300 focus:outline-none text-[#1a237e]"
+                  placeholder=" "
+                  autoComplete="off"
+                  id="contact-phone"
+                />
+                <label htmlFor="contact-phone" className={`absolute left-0 top-4 text-[#7a869a] text-sm font-light pointer-events-none transition-all duration-300 ${formData.phone ? 'text-xs -top-1 text-[#60aaff]' : 'text-sm top-4'}`}>Número de teléfono</label>
+                {touched.phone && errors.phone && (
+                  <span className="text-xs text-red-500 mt-1 block">{errors.phone}</span>
+                )}
+              </div>
             <div className="relative mb-2">
               <div className="relative">
                 <select

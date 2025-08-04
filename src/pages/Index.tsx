@@ -91,7 +91,7 @@ const Index = () => {
               <div className="flex-1 mb-8 md:mb-0 flex flex-col items-start">
                 <div className="flex items-center mb-4">
                   <img 
-                    src="/blas-logo.png" 
+                    src="/codamalogo.svg" 
                     alt="Blas Chiaretta Logo" 
                     className="h-12 w-auto"
                   />
@@ -130,7 +130,7 @@ const Index = () => {
               </div>
             </div>
             <div className="pt-6 text-center text-xs text-white/50">
-              <a href="https://www.agarucorp.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-300 transition-colors">Powered by AgaruCorp</a>
+              <a href="https://www.agarucorp.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-300 transition-colors">© Powered by AgaruCorp</a>
             </div>
           </div>
         </footer>

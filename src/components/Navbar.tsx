@@ -68,9 +68,9 @@ const Navbar = () => {
             className="flex items-center pl-6"
           >
             <img 
-              src="/blas-logo.png" 
+              src="/codamalogo.svg" 
               alt="Blas Chiaretta Logo" 
-              className="h-10 w-auto"
+              className="h-8 w-auto"
             />
           </button>
 
@@ -122,9 +122,9 @@ const Navbar = () => {
             </span>
             <button onClick={() => scrollToSection('hero')} className="flex items-center z-10">
               <img 
-                src="/blas-logo.png" 
+                src="/codamalogo.svg" 
                 alt="Blas Chiaretta Logo" 
-                className="h-10 w-auto"
+                className="h-8 w-auto"
               />
             </button>
             <span className="absolute right-0 flex items-center h-full">

@@ -155,7 +155,7 @@ const Portfolio = () => {
                 {/* Objective Circle */}
                 <div className="relative mb-6">
                   <div className={`w-24 h-24 mx-auto bg-gradient-to-br ${objective.color} rounded-full flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-500 group-hover:scale-110`}>
-                    <span className="text-3xl">{objective.icon}</span>
+                    <span className="text-3xl" style={{ filter: 'brightness(0) invert(1)' }}>{objective.icon}</span>
                   </div>
                 </div>
                 
