@@ -1,6 +1,6 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { useLanguage } from '@/contexts/LanguageContext';
-import blasPortrait from '@/assets/blas-chiaretta-portrait.jpg';
+import whatsappImage from '@/assets/Imagen de WhatsApp 2025-07-24 a las 16.33.05_ae75c55a.jpg';
 import logoDiTella from '@/assets/logoditella.svg';
 import logoPompeu from '@/assets/logopompeu.webp';
 
@@ -70,24 +70,24 @@ const About = () => {
             {/* Imagen y educación abajo */}
             <div className="flex flex-col items-center mt-10">
               <div className="relative w-full flex justify-center">
-                <img
-                  src={blasPortrait}
-                  alt="Blas Chiaretta - Financial Advisor"
-                  className="w-full max-w-xs h-auto object-cover rounded-lg shadow-2xl"
-                  style={{ objectPosition: 'center 20%' }}
-                />
+                                 <img
+                   src={whatsappImage}
+                   alt="WhatsApp - Financial Services"
+                   className="w-full max-w-xs h-auto object-cover rounded-lg shadow-2xl"
+                   style={{ objectPosition: 'center 20%' }}
+                 />
               </div>
               {/* Education debajo de la imagen */}
               <div className="mt-6 w-full max-w-xs flex flex-col items-start">
                 <div className="flex items-center mb-3">
                   <img src={logoDiTella} alt="Universidad Torcuato Di Tella" className="w-12 h-auto mr-3" />
-                  <span className="leading-relaxed inline-block ml-2" style={{ fontSize: '13px', color: '#1a237e', fontFamily: 'Mulish, sans-serif' }}>
+                  <span className="text-sm font-medium text-[#1a237e] leading-relaxed inline-block ml-2">
                     Universidad Torcuato Di Tella - Business Economics Degree
                   </span>
                 </div>
                 <div className="flex items-center">
                   <img src={logoPompeu} alt="UPF Barcelona School of Management" className="w-20 h-auto mr-3" />
-                  <span className="leading-relaxed inline-block" style={{ fontSize: '13px', color: '#1a237e', fontFamily: 'Mulish, sans-serif' }}>
+                  <span className="text-sm font-medium text-[#1a237e] leading-relaxed inline-block">
                     UPF - Master in Finance and Banking
                   </span>
                 </div>
@@ -152,24 +152,24 @@ const About = () => {
               {/* Professional Image + Education */}
               <div className="flex flex-col items-center lg:items-end order-1 lg:order-2 h-full mt-[-112px]">
                 <div className="relative">
-                  <img
-                    src={blasPortrait}
-                    alt="Blas Chiaretta - Financial Advisor"
-                    className="w-[28.8rem] h-[21.6rem] object-cover rounded-lg self-start shadow-2xl"
-                    style={{ objectPosition: 'center 20%' }}
-                  />
+                                     <img
+                     src={whatsappImage}
+                     alt="WhatsApp - Financial Services"
+                     className="w-[28.8rem] h-[21.6rem] object-cover rounded-lg self-start shadow-2xl"
+                     style={{ objectPosition: 'center 20%' }}
+                   />
                 </div>
                 {/* Education debajo de la imagen */}
                 <div className="mt-10 w-[28.8rem] flex flex-col items-start lg:items-start ml-0">
                   <div className="flex items-center mb-3 ml-0">
                     <img src={logoDiTella} alt="Universidad Torcuato Di Tella" className="w-12 h-auto mr-3" />
-                    <span className="leading-relaxed inline-block min-w-[220px] ml-8" style={{ fontSize: '13px', color: '#1a237e', fontFamily: 'Mulish, sans-serif' }}>
+                    <span className="text-sm font-medium text-[#1a237e] leading-relaxed inline-block min-w-[220px] ml-8">
                       Universidad Torcuato Di Tella - Business Economics Degree
                     </span>
                   </div>
                   <div className="flex items-center">
                     <img src={logoPompeu} alt="UPF Barcelona School of Management" className="w-20 h-auto mr-3" />
-                    <span className="leading-relaxed inline-block min-w-[220px]" style={{ fontSize: '13px', color: '#1a237e', fontFamily: 'Mulish, sans-serif' }}>
+                    <span className="text-sm font-medium text-[#1a237e] leading-relaxed inline-block min-w-[220px]">
                       UPF - Master in Finance and Banking
                     </span>
                   </div>
