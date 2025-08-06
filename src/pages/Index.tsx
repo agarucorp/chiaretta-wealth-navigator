@@ -91,8 +91,8 @@ const Index = () => {
               <div className="flex-1 mb-8 md:mb-0 flex flex-col items-start">
                 <div className="flex items-center mb-4">
                   <img 
-                    src="/codamalogo.svg" 
-                    alt="Blas Chiaretta Logo" 
+                    src="/kodama1.svg" 
+                    alt="Kodama Logo" 
                     className="h-12 w-auto"
                   />
                 </div>

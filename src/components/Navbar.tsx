@@ -57,7 +57,7 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-500 ${scrolled ? '' : 'bg-transparent'} backdrop-blur-md`}
-      style={{ fontFamily: 'Public Sans, sans-serif', backgroundColor: scrolled ? 'rgba(30,35,65,0.85)' : 'transparent' }}
+      style={{ fontFamily: 'Public Sans, sans-serif', backgroundColor: scrolled ? 'rgba(30,35,65,1)' : 'transparent' }}
     >
       <div className="container mx-auto py-3">
         {/* Web Navbar */}
@@ -68,8 +68,8 @@ const Navbar = () => {
             className="flex items-center pl-6"
           >
             <img 
-              src="/codamalogo.svg" 
-              alt="Blas Chiaretta Logo" 
+              src="/kodama1.svg" 
+              alt="Kodama Logo" 
               className="h-8 w-auto"
             />
           </button>
@@ -122,8 +122,8 @@ const Navbar = () => {
             </span>
             <button onClick={() => scrollToSection('hero')} className="flex items-center z-10">
               <img 
-                src="/codamalogo.svg" 
-                alt="Blas Chiaretta Logo" 
+                src="/kodama1.svg" 
+                alt="Kodama Logo" 
                 className="h-8 w-auto"
               />
             </button>

@@ -26,7 +26,7 @@ const Portfolio = () => {
       id: 3,
       title: "Growth Potential",
       description: "Maximize long-term wealth accumulation",
-      icon: "📈",
+      icon: "🌱",
       color: "from-[#1a237e] to-[#2c3e50]"
     },
     {
